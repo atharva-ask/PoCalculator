@@ -1,0 +1,97 @@
+/* Mytable.css */
+
+/* Styles for the table */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 5px;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+th,
+td {
+  border: none;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Alternate row background color */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect for table rows */
+tr:hover {
+  background-color: #e2e2e2;
+}
+
+/* Button styles */
+button {
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Add some spacing between columns */
+td:not(:last-child),
+th:not(:last-child) {
+  border-right: 1px solid #dddddd;
+}
+
+/* Add some padding to the left of the first column */
+td:first-child,
+th:first-child {
+  padding-left: 16px;
+}
+
+/* Add some padding to the right of the last column */
+td:last-child,
+th:last-child {
+  padding-right: 16px;
+}
+
+/* Add a box shadow to the table */
+table {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Add a hover effect to the table rows */
+tr:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add a border radius to the table */
+table {
+  border-radius: 5px;
+}
+
+/* Add a border radius to the first and last cells of each row */
+tr:first-child td:first-child {
+  border-top-left-radius: 5px;
+}
+
+tr:first-child td:last-child {
+  border-top-right-radius: 5px;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius: 5px;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius: 5px;
+}

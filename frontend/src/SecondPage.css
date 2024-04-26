@@ -1,0 +1,101 @@
+/* SecondPage.css */
+
+.page-container {
+  max-width: 800px;
+  margin: 40px auto; /* Adjusted margin to leave more space at the start */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Set default background color of buttons to black */
+.navigation-links a,
+.navigation-links button {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #000000; /* Set default background color to black */
+  transition: background-color 0.3s;
+  margin: 0 10px; /* Add margin to create space between buttons */
+}
+
+/* Set background color of buttons to blue when hovered */
+.navigation-links a:hover,
+.navigation-links button:hover {
+  background-color: #007bff; /* Change background color to blue */
+}
+
+/* Set background color of buttons to blue when clicked */
+.navigation-links a:active,
+.navigation-links button:active {
+  background-color: #007bff; /* Change background color to blue */
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 12px;
+  border: 1px solid #cccccc;
+}
+
+table th {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+input[type="text"] {
+  width: 95%;
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid #cccccc;
+  border-radius: 5px;
+}
+
+/* Center the submit button */
+.submit-button {
+  display: block;
+  margin: 0 auto; /* Center horizontally */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: black;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
