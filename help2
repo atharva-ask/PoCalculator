@@ -1,0 +1,9 @@
+Alembic is used to create teable from models files similar to migrations
+alembic init alembic
+in elembic.init give db url and in env give db name i.e session
+
+
+
+in python we can create object of any function
+as python treats functions as first class object
+and we can return function as a value
