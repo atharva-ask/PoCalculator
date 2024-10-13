@@ -1,3 +1,0 @@
-#Query to calculate sum of column
-SELECT SUM(po1) from course;
-

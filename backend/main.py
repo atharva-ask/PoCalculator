@@ -15,6 +15,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 class customer_query(BaseModel):
     year_val: int
     sem_val: int
@@ -27,21 +28,6 @@ colname =(
     'po7', 'po8', 'po9', 'po10', 'po11','po12', 
     'pso1', 'pso2', 'pso3'
     )
-
-@app.get('/temp')
-def getdata():
-    cur.execute(f"""
-            SELECT * FROM temp 
-        """)
-    data = cur.fetchall()
-    print(data)
-
-    data_list = list()
-    for row in data:
-        data_list.append(row)
-
-    return data_list
-
 
 def getCourseNameIdmap(yearval:int, semval:int):
     cur.execute(f"""
@@ -64,6 +50,7 @@ def subjects(yearval:int, semval:int):
         SELECT c_code, title, id FROM course 
         WHERE year = '{yearval}' AND sem = '{semval}';
     """)
+
     data = cur.fetchall()
     if(len(data) == 0):
         return HTTPException(status_code=400, detail="Not sufficient data")
@@ -75,6 +62,7 @@ def subjects(yearval:int, semval:int):
         temp["course_name"] = row[1]
         temp["course_id"] = row[2]
         data_list.append(temp)
+        
     return data_list
 
 
@@ -117,7 +105,7 @@ def getoldpoval(pk:int):
 
 
 
-@app.post('/update_po/')
+@app.put('/update_po/')
 def update_po(pk: int, val: float, colname: str):
 
     try:
@@ -281,9 +269,6 @@ def getacheivedPoAttainment(year : int):
     return res
 
 
-
-    
-    
 
 
 
