@@ -2,11 +2,26 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from database import get_database_conn
 from pydantic import BaseModel
+import psycopg2
+DB_URL = 'postgresql://default:2ytpuU7swTql@ep-young-salad-a10bjpmp-pooler.ap-southeast-1.aws.neon.tech:5432/verceldb?sslmode=require'
 
 app = FastAPI()
 conn = get_database_conn()
 cur = conn.cursor()
 
+def get_database_conn():
+    try:
+        conn = psycopg2.connect(
+            DB_URL
+        )
+        print("Database Connected!")
+
+        return conn
+    
+    except Exception as e:
+        print("Database Connection Error:", e)
+        return None
+    
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # This will allow all origins, you can specify your frontend URL instead
