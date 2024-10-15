@@ -1,4 +1,4 @@
-git uvicorn
+uvicorn
 fastapi
 sqlalchemy
 psycopg2-binary  # Replace psycopg2 with this
