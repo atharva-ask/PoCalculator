@@ -6,4 +6,8 @@
     "routes": [
         {"src": "/(.*)", "dest": "backend/main.py"}
     ]
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f2a2dac (secondcommit)

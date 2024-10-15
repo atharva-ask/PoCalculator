@@ -1,4 +1,5 @@
+python3
 uvicorn
 fastapi
 sqlalchemy
-psycopg2
+psycopg2-binary  # Replace psycopg2 with this
